@@ -28,13 +28,10 @@ const contactsSlice = createSlice({
       })
 
       .addCase(deleteContact.fulfilled, (state, action) => {
-        // const item = state.contacts.items.findIndex(
-        //   item => item.id === action.payload.id
-        // );
-        // state.contacts.items.splice(item, 1);
-        state.contacts = state.contacts.items.filter(item => item.id !== action.payload);
+        state.contacts = state.contacts.items.filter(
+          item => item.id !== action.payload
+        );
       })
-
       .addMatcher(
         action => action.type.endsWith('/fulfilled'),
         state => {
@@ -70,7 +67,6 @@ const contactsSlice = createSlice({
 //     },
 //   },
 // });
-
 
 export const { addContacts, setFilter } = contactsSlice.actions;
 
