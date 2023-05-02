@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types'
 import {Button} from '../addForm/AddForm.styled'
-import { deleteContact } from 'Redux/contactsSlice';
+import { deleteContact } from 'Redux/operations';
 import { useDispatch } from 'react-redux';
 
-export const Contact = ({contact:{name, number, id}, onDeleteContact}) => {
+export const Contact = ({contact:{name, phone, id}}) => {
     const dispatch = useDispatch()
        return (
         <div style={{ margin: "0 auto",
@@ -12,7 +12,7 @@ export const Contact = ({contact:{name, number, id}, onDeleteContact}) => {
         justifyContent: 'center',
          }}>
         <p>{name}:</p>
-        <p>{number}</p>
+        <p>{phone}</p>
         <Button type="button" onClick={() => {dispatch(deleteContact(id))}}>Delete</Button>
         </div>
     )
@@ -21,7 +21,7 @@ export const Contact = ({contact:{name, number, id}, onDeleteContact}) => {
 Contact.propTypes = {
     contacts: PropTypes.shape({
     name: PropTypes.string,
-    number: PropTypes.string,
+    phone: PropTypes.string,
     id: PropTypes.string,
   }),
-  onDeleteContact: PropTypes.func}
+}
