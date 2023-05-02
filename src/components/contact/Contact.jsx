@@ -18,10 +18,10 @@ export const Contact = ({contact:{name, phone, id}}) => {
     )
 };
 
-Contact.propTypes = {
-    contacts: PropTypes.shape({
-    name: PropTypes.string,
-    phone: PropTypes.string,
-    id: PropTypes.string,
-  }),
-}
+// Contact.propTypes = {
+//     contacts: PropTypes.shape({
+//     name: PropTypes.string,
+//     phone: PropTypes.string,
+//     id: PropTypes.string,
+//   }),
+// }
