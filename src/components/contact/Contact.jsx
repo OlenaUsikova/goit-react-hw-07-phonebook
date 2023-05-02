@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import {Button} from '../addForm/AddForm.styled'
 import { deleteContact } from 'Redux/operations';
 import { useDispatch } from 'react-redux';

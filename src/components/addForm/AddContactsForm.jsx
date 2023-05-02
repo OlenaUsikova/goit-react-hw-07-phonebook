@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import {Button, StyledForm, StyledInput} from '../addForm/AddForm.styled'
 import {useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
