@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
 import {Button} from '../addForm/AddForm.styled'
 import { deleteContact } from 'Redux/operations';
 import { useDispatch } from 'react-redux';
@@ -18,10 +18,10 @@ export const Contact = ({contact:{name, phone, id}}) => {
     )
 };
 
-// Contact.propTypes = {
-//     contacts: PropTypes.shape({
-//     name: PropTypes.string,
-//     phone: PropTypes.string,
-//     id: PropTypes.string,
-//   }),
-// }
+Contact.propTypes = {
+    contacts: PropTypes.shape({
+    name: PropTypes.string,
+    phone: PropTypes.string,
+    id: PropTypes.string,
+  }),
+}
